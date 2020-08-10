@@ -1,0 +1,85 @@
+<?php
+/**
+ * @package Hello_Beautiful
+ * @version 1.0
+ */
+/*
+Plugin Name: Hello Beautiful
+Plugin URI: https://worksbymichelle.com/
+Description: This is not just a plugin, it tells you how amazing you are! <cite>Hello, Beautiful</cite> in the upper right of your admin screen on every page.
+Author: Michelle Frechette
+Version: 1.0
+Author URI: https://worksbymichelle.com/
+*/
+
+function hello_beautiful_get_line() {
+	/** These are the lines for Hello Beautiful */
+	$lines = "Hello, Beautiful
+Well, hello, Beautiful
+It's so nice to see you
+You look amazing today
+You're an amazing web designer
+This site you built is gorgeous
+Have I told you lately that I love you
+Every time you log in, I smile
+How have you been beautiful
+There's a word for you, it's 'Splendiforous'
+Please come back soon, my dear";
+
+	// Here we split it into lines.
+	$lines = explode( "\n", $lines );
+
+	// And then randomly choose a line.
+	return wptexturize( $lines[ mt_rand( 0, count( $lines ) - 1 ) ] );
+}
+
+// This just echoes the chosen line, we'll position it later.
+function hello_beautiful() {
+	$chosen = hello_beautiful_get_line();
+	$lang   = '';
+	if ( 'en_' !== substr( get_user_locale(), 0, 3 ) ) {
+		$lang = ' lang="en"';
+	}
+
+	printf(
+		'<p id="beautiful"><span class="screen-reader-text">%s </span><span dir="ltr"%s>%s</span></p>',
+		__( 'Daily affirmation:', 'hello-beautiful' ),
+		$lang,
+		$chosen
+	);
+}
+
+// Now we set that function up to execute when the admin_notices action is called.
+add_action( 'admin_notices', 'hello_beautiful' );
+
+// We need some CSS to position the paragraph.
+function beautiful_css() {
+	echo "
+	<style type='text/css'>
+	#beautiful {
+		float: right;
+		padding: 5px 10px;
+		margin: 0;
+		font-size: 12px;
+		line-height: 1.6666;
+		color: blue;
+	}
+	.rtl #beautiful {
+		float: left;
+	}
+	.block-editor-page #beautiful {
+		display: none;
+	}
+	@media screen and (max-width: 782px) {
+		#beautiful,
+		.rtl #beautiful {
+			float: none;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+	</style>
+	";
+}
+
+add_action( 'admin_head', 'beautiful_css' );
