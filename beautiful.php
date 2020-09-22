@@ -24,7 +24,10 @@ Have I told you lately that I love you
 Every time you log in, I smile
 How have you been beautiful
 There's a word for you, it's 'Splendiforous'
-Please come back soon, my dear";
+Please come back soon, my dear
+You should win awards for the amazing work you do
+The only thing better than this website is YOU
+Other people build websites, you build works of art";
 
 	// Here we split it into lines.
 	$lines = explode( "\n", $lines );
@@ -62,7 +65,8 @@ function beautiful_css() {
 		margin: 0;
 		font-size: 12px;
 		line-height: 1.6666;
-		color: blue;
+		color: #d328ae;
+		font-weight: bold;
 	}
 	.rtl #beautiful {
 		float: left;
