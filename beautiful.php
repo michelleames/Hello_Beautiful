@@ -5,7 +5,7 @@
  */
 /*
 Plugin Name: Hello Beautiful
-Plugin URI: https://worksbymichelle.com/
+Plugin URI: https://worksbymichelle.com/hello-beautiful
 Description: This is not just a plugin, it tells you how amazing you are! <cite>Hello, Beautiful</cite> in the upper right of your admin screen on every page.
 Author: Michelle Frechette
 Version: 1.0
