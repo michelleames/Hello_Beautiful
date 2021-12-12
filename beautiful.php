@@ -1,21 +1,35 @@
 <?php
 /**
  * @package Hello_Beautiful
- * @version 1.1
+ * @version 1.2
  */
 /*
 Plugin Name: Hello Beautiful
 Plugin URI: https://worksbymichelle.com/hello-beautiful
 Description: This is not just a plugin, it tells you how amazing you are! <cite>Hello, Beautiful</cite> in the upper right of your admin screen on every page.
 Author: Michelle Frechette
-Version: 1.1
+Version: 1.2
 Author URI: https://worksbymichelle.com/
 */
 
 function hello_beautiful_get_line() {
 	/** These are the lines for Hello Beautiful */
 	$lines = "Hello, Beautiful
-Well, hello, Beautiful
+You deserve another cup of coffee
+Yes you can
+Are you ready to create a masterpiece
+What will you create today
+Press publish because the world needs your voice
+You should teach a class in this
+I love how your mind works
+You are doing great
+You need a cookie
+Take a deep breath and go for it
+Peace and love
+You look nice today
+You got this
+Share your words with the world because we want to read them
+Write your truth then press publish
 It's so nice to see you
 You look amazing today
 You're an amazing web designer
@@ -65,7 +79,7 @@ function beautiful_css() {
 		margin: 0;
 		font-size: 12px;
 		line-height: 1.6666;
-		color: #d328ae;
+		color: #20bc34;
 		font-weight: bold;
 	}
 	.rtl #beautiful {
