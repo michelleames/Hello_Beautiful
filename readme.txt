@@ -1,8 +1,8 @@
 === Hello Beautiful ===
 Contributors: michelleames
 Donate link: https://worksbymichelle.com/
-Stable tag: 1.1
-Tested up to: 5.5.1
+Stable tag: 1.2
+Tested up to: 5.8.2
 Requires at least: 4.6
 Requires PHP: 7.1
 License: GPLv3
@@ -14,3 +14,6 @@ This is not just a plugin, it's a reminder of how awesome you are, how talented 
 
 This is not just a plugin, it tells you how amazing you are!
 
+Every time you log into your WordPress dashboard, you will receive a positive message just below the Hello, Your Name, on your site.
+
+Version 1.2 includes new text and displays in a new color.
