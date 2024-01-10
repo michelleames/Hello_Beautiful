@@ -51,6 +51,7 @@ jobs:
     # Using 10up's deployment action, we deploy our plugin to the WordPress repository.
     # You can view that action here: https://github.com/10up/action-wordpress-plugin-deploy
     - name: WordPress Plugin Deploy
+      id: deploy
       uses: 10up/action-wordpress-plugin-deploy@stable
 
       # Steps can also provide arguments, so this configures 10up's action to also generate a zip file. 
@@ -81,7 +82,7 @@ jobs:
         upload_url: ${{ github.event.release.upload_url }}
 
         # Provide the path to the file generated in the previous step.
-        asset_path: ${{github.workspace}}/${{ github.event.repository.name }}.zip
+        asset_path: ${{ steps.deploy.outputs.zip-path }}
 
         # Provide what the file should be named when attached to the release (plugin-name.zip)
         asset_name: ${{ github.event.repository.name }}.zip
