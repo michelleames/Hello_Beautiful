@@ -1,14 +1,14 @@
 <?php
 /**
  * @package Hello_Beautiful
- * @version 1.3
+ * @version 1.4
  */
 /*
 Plugin Name: Hello Beautiful
 Plugin URI: https://worksbymichelle.com/hello-beautiful
 Description: This is not just a plugin, it tells you how amazing you are! <cite>Hello, Beautiful</cite> in the upper right of your admin screen on every page.
 Author: Michelle Frechette
-Version: 1.3
+Version: 1.4
 Author URI: https://worksbymichelle.com/
 */
 
@@ -39,7 +39,6 @@ Have I told you lately that I love you
 Every time you log in, I smile
 How have you been beautiful
 There's a word for you, it's 'Splendiforous'
-Please come back soon, my dear
 You should win awards for the amazing work you do
 The only thing better than this website is YOU
 Other people build websites, you build works of art";
@@ -80,7 +79,7 @@ function beautiful_css() {
 		margin: 0;
 		font-size: 12px;
 		line-height: 1.6666;
-		color: #20bc34;
+		color: #6e3180;
 		font-weight: bold;
 	}
 	.rtl #beautiful {
